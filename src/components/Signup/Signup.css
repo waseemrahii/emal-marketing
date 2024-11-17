@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+  .pricing-content-wrap
+  {
+    flex-direction: column;
+  }
+  .ptb-60 {
+     padding: 0px;  
+  }
+}
+
+

@@ -1,0 +1,23 @@
+.style-WsrOS
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5rem; */
+    margin-top: 0rem;
+    padding: 1rem;
+    width: 100%;
+    flex-direction: column;
+    background: radial-gradient(22.4% 45.45% at 55.91% 89.19%, rgba(119, 56, 237, .3) 0, rgba(119, 56, 237, 0) 100%), linear-gradient(98.39deg, #48cb9d 0, #5f91ed 96.14%) !important;
+
+}
+
+.style-2ooWd
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 0rem;
+    padding: 1rem;
+}

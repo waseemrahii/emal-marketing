@@ -1,0 +1,66 @@
+.Default_marketing-default-hero__Ew4q_ {
+  background: #D7FEC8 !important;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem; /* Add some padding for small screens */
+}
+
+.Default_marketing-default-hero__content__4Xu0A {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  gap: 1rem;
+  text-align: center; /* Center align text for small screens */
+}
+
+.Default_marketing-default-hero__document__zulIy h1 {
+  font-size: 1.5rem; /* Smaller font size for heading */
+  line-height: 1.8rem; /* Adjust line height */
+}
+
+.Default_marketing-default-hero__document__zulIy p {
+  font-size: 1rem; /* Smaller font size for paragraph */
+  line-height: 1.4rem; /* Adjust line height */
+  margin: 0.5rem 0;
+}
+
+.Default_marketing-default-hero__cta__zb9by {
+  display: flex;
+  flex-direction: column; /* Stack buttons on small screens */
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.Default_marketing-default-hero__media__z3g1Z iframe {
+  height: 180px; /* Adjust height for smaller screens */
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .Default_marketing-default-hero__content__4Xu0A {
+    text-align: left; /* Align left for larger screens */
+    align-items: flex-start;
+  }
+
+  .Default_marketing-default-hero__document__zulIy h1 {
+    font-size: 2rem; /* Larger heading size */
+    line-height: 2.2rem;
+  }
+
+  .Default_marketing-default-hero__document__zulIy p {
+    font-size: 1.125rem; /* Slightly larger paragraph size */
+    line-height: 1.6rem;
+  }
+
+  .Default_marketing-default-hero__cta__zb9by {
+    flex-direction: row; /* Align buttons in a row for larger screens */
+    justify-content: flex-start;
+  }
+
+  .Default_marketing-default-hero__media__z3g1Z iframe {
+    height: 300px; /* Adjust height for larger screens */
+  }
+}

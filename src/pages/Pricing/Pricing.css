@@ -1,0 +1,149 @@
+/* Wrapper Container to center the card */
+.h-pricing-card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    
+
+  }
+  
+  /* Row for pricing cards */
+  .h-pricing-card__row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap; /* For responsiveness */
+    margin: 8rem;
+    
+  }
+  
+  /* Main container */
+  .h-pricing-card__container {
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .h-popular {
+  }
+  
+  /* Hover effect */
+  .h-pricing-card__container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title */
+  .h-pricing-card__title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Description */
+  .h-pricing-card__description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Current Price */
+  .h-dynamic-size-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Button */
+  .h-button {
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .h-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Badge for the popular plan */
+  .h-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.875rem;
+  }
+  
+  /* Features Section */
+  .h-pricing-card__features--grouped {
+    margin-top: 30px;
+  }
+  
+  .h-plan-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .h-plan-feature svg {
+    margin-right: 10px;
+  }
+  
+  .h-plan-feature span {
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  /* Separator */
+  .h-pricing-card__separator {
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .h-pricing-card__container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+  /* Current Price */
+.h-dynamic-size-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 20px; /* Ensure controlled spacing */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  
+  .h-pricing-card__row
+  {
+    margin: 7rem 2rem 2rem 2rem;
+  }
+  
+}
