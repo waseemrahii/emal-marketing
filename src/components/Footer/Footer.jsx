@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div className="footer-top ptb-120    snipcss-B7PwR">
+        <div className="footer-top ptb-120  snipcss-B7PwR">
             <div className="container">
                 <div className="row justify-content-between">
                     <div className="col-md-8 col-lg-4 mb-md-4 mb-lg-0">

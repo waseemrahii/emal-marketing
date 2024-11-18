@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Signup.css';
 import axios from 'axios';
 import { useState } from 'react';
+import ApiUrl from '../../ApiUrl';
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ const SignUp = () => {
 
     try {
       console.log("user data ", name,email,country,phone, password, address)
-      const response = await axios.post(`https://email-backend-nine.vercel.app/api/users/signup`, {
+      const response = await axios.post(`${ApiUrl}/api/users/signup`, {
         username: name,
         email,
         country,

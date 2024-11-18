@@ -10,8 +10,9 @@ import Contact_Page from './pages/Contact/Contact_Page';
 import ContactMessages from './pages/Contact/ContactMessages';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
-import Cart from './components/Cart/AddToCart';
+// import Cart from './components/Cart/AddToCart';
 import Footer from './components/Footer/Footer';
+import SubscriptionPage from './pages/Subscription/SubscriptionPage';
 
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
            <Route path="/messages" element={<ContactMessages />} />
         <Route path="/signin" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<Cart />} /> 
-      
+        {/* <Route path="/cart" element={<Cart />} />  */}
+        <Route path="/subscribe" element={<SubscriptionPage />} />
 
       
       </Routes>

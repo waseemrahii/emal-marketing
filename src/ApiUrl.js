@@ -1,5 +1,6 @@
 
- const ApiUrl = 'http://localhost:3000';
- // Replace 'https://your-api-url.com' with your actual API URL.
+//  const ApiUrl = 'http://localhost:3000';
+ const ApiUrl = 'https://email-backend-nine.vercel.app';
+
  
  export default ApiUrl;

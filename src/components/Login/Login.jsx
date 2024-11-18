@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
+import ApiUrl from '../../ApiUrl';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://email-backend-nine.vercel.app/api/users/signin', {
+            const response = await fetch(`${ApiUrl}/api/users/signin`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -22,12 +23,7 @@ const Login = () => {
             const data = await response.json();
             if (data.token && data.user) {
                 localStorage.setItem('token', data.token);
-                localStorage.setItem('userId', data.user?._id);
-                localStorage.setItem('isLoggedIn', 'true');
-                localStorage.setItem('username', data.username); // Assuming username is returned
-                localStorage.setItem('email', email);
-                localStorage.setItem('role', data.role); // Assuming the role is in the response
-
+                localStorage.setItem('user', JSON.stringify(data.user));
                 toast.success('Login successful!');
                 navigate('/'); // Navigate to the home page
             } else {
@@ -43,7 +39,7 @@ const Login = () => {
         <div>
             <ToastContainer />
             <section className="sign-up-in-section">
-                <div className="container ">
+                <div className="container">
                     <div className="row align-items-center justify-content-center" style={{ width: '100%' }}>
                         <div className="col-lg-5 col-md-8">
                             <div className="register-wrap bg-white p-5 shadow rounded-custom">
