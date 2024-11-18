@@ -64,15 +64,6 @@
   } 
 }     
 
-*,:after,:before { 
-    box-sizing: border-box; 
-    border: 0 solid #e5e7eb;
-} 
-
-*,:after,:before { 
-    box-sizing: border-box;
-} 
-
 .dist_marketing-media__body__KhiUY { 
     display: flex; 
     flex-direction: column; 

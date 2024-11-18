@@ -11,6 +11,7 @@ import ContactMessages from './pages/Contact/ContactMessages';
 import Login from './components/Login/Login';
 import SignUp from './components/Signup/Signup';
 import Cart from './components/Cart/AddToCart';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
       
       </Routes>
+      <Footer />
     </Router>
   );
 }

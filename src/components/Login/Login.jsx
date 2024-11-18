@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
+            const response = await fetch('http://localhost:5000/api/users/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -20,9 +20,9 @@ const Login = () => {
                 body: JSON.stringify({ email, password }),
             });
             const data = await response.json();
-            if (data.token && data.userId) {
+            if (data.token && data.user) {
                 localStorage.setItem('token', data.token);
-                localStorage.setItem('userId', data.userId);
+                localStorage.setItem('userId', data.user?._id);
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('username', data.username); // Assuming username is returned
                 localStorage.setItem('email', email);
@@ -92,7 +92,7 @@ const Login = () => {
                                     </div>
                                     <p className="font-monospace fw-medium text-center text-muted mt-3 pt-4 mb-0">
                                         Don’t have an account?{' '}
-                                        <Link to="/" className="text-decoration-none">
+                                        <Link to="/signup" className="text-decoration-none">
                                             Sign up Today
                                         </Link>
                                         <br />
