@@ -12,7 +12,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/users/signin', {
+            const response = await fetch('https://email-backend-nine.vercel.app/api/users/signin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

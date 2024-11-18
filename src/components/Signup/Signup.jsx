@@ -19,7 +19,7 @@ const SignUp = () => {
 
     try {
       console.log("user data ", name,email,country,phone, password, address)
-      const response = await axios.post(`http://localhost:5000/api/users/signup`, {
+      const response = await axios.post(`https://email-backend-nine.vercel.app/api/users/signup`, {
         username: name,
         email,
         country,
