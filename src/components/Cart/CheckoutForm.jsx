@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useDispatch } from 'react-redux';
-import { clearCart } from '../redux/cartSlice'; // Adjust the path as needed
+// import { clearCart } from '../redux/cartSlice'; // Adjust the path as needed
 
 const CheckoutForm = () => {
   const stripe = useStripe();

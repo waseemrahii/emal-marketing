@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import { Elements, useStripe, useElements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import axios from 'axios';
-import BaseUrl from '../../BaseUrl';
 
 // Load Stripe outside of a component to avoid reinitialization issues
 const stripePromise = loadStripe('pk_test_51Pwpi4023TaI0bKzKegArlRgkp5z30jCWWTwgG0G5sN9P7ICopqAZAoK1LRAG8k6efrBsnmASu0TY9zA1FEdkKOr00IG6Jz5sF');
@@ -28,57 +27,7 @@ const CheckoutForm = () => {
     setShippingAddress((prev) => ({ ...prev, [name]: value }));
   };
 
-  // const handleCheckout = async (event) => {
-  //   event.preventDefault();
-  
-  //   if (!stripe || !elements) return;
-  
-  //   try {
 
-  //   //      // Log the cartItems to check their values before making the request
-  //   // console.log("Cart Items before checkout:", cartItems);
-    
-  //   // // Construct the products data
-  //   // const productsData = cartItems.map(item => ({
-  //   //   productId: item._id,
-  //   //   name: item.name,
-  //   //   price: item.price,
-  //   //   quantity: item.quantity,
-  //   // }));
-    
-  //   // // Log the products data to ensure it’s correctly structured
-  //   // console.log("Products Data for checkout:", productsData);
-  //     const { data } = await axios.post('http://localhost:3000/api/orders', {
-  //       userId: '669ac00ffe4a9e456fb35af2',
-  //       products: cartItems.map(item => ({
-  //         productId: item._id,
-  //         name: item.name,
-  //         price: item.price,
-  //         quantity: item.quantity,
-  //       })),
-  //       totalPrice,
-  //       shippingAddress
-  //     });
-  
-  //     const { sessionId } = data;
-  
-  //     if (sessionId) {
-  //       const { error } = await stripe.redirectToCheckout({ sessionId });
-  
-  //       if (error) {
-  //         console.error('Error during checkout:', error);
-  //         alert('There was an error during the checkout process. Please try again.');
-  //       }
-  //     } else {
-  //       console.error('No sessionId returned from the server.');
-  //       alert('No session ID received from the server.');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error during checkout:', error.response ? error.response.data : error.message);
-  //     alert('An error occurred. Please try again.');
-  //   }
-  // };
-  
 
   const handleCheckout = async (event) => {
     event.preventDefault();

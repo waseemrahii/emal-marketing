@@ -5,7 +5,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromCart, clearCart } from '../redux/cartSlice'; // Adjust the path as needed
 import { Link } from 'react-router-dom';
-import ImageUrl from '../../ImageUrl';
 
 const Cart = () => {
   const dispatch = useDispatch();
