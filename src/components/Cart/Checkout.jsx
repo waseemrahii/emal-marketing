@@ -48,9 +48,11 @@ const CheckoutForm = () => {
       
       // Log the products data to ensure it’s correctly structured
       console.log("Products Data for checkout:", productsData);
-  
+      const user = JSON.parse(localStorage.getItem('user'));
+    console.log("user data-----", user)
+    const userId = user?.user?._id;
       const { data } = await axios.post(`${BaseUrl}/api/orders`, {
-        userId: '66e148f7523bc180670612ec',
+        userId: '',
         products: productsData,
         totalPrice,
         shippingAddress

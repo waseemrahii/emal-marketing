@@ -39,7 +39,7 @@ const Login = () => {
         <div>
             <ToastContainer />
             <section className="sign-up-in-section">
-                <div className="container">
+                <div className="container mt-3">
                     <div className="row align-items-center justify-content-center" style={{ width: '100%' }}>
                         <div className="col-lg-5 col-md-8">
                             <div className="register-wrap bg-white p-5 shadow rounded-custom">

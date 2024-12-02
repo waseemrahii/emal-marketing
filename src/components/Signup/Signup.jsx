@@ -19,7 +19,9 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
+
       console.log("user data ", name,email,country,phone, password, address)
+      
       const response = await axios.post(`${ApiUrl}/api/users/signup`, {
         username: name,
         email,
@@ -43,7 +45,7 @@ const SignUp = () => {
   return (
     <div>
       <ToastContainer />
-      <section className="sign-up-in-section bg-dark ptb-60" id="style-CrJym">
+      <section className="container p-4" id="style-CrJym mt-12">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-7 col-10" style={{ padding: "3rem 0rem 0rem 0rem" }}>
