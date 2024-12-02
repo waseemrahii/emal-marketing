@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa'; // Using React icons
 import './Hero.css'; // Importing CSS file for styling
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -17,6 +18,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="Default_marketing-default-hero__cta__zb9by">
+             <Link to={'/pricing'} >
               <button
                 type="button"
                 data-testid="marketing-btn"
@@ -26,6 +28,8 @@ const Hero = () => {
                 <span className="">Sign up free</span>
                 <FaArrowRight className="ml-2" /> {/* React icon added */}
               </button>
+              </Link>
+
             </div>
           </div>
           <div className="Default_marketing-default-hero__media__z3g1Z">

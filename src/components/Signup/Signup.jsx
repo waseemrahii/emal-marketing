@@ -34,7 +34,7 @@ const SignUp = () => {
       if (response.status === 201) { // Check for successful status
         console.log("Response:", response.data);
         toast.success('Registration successful!');
-        navigate("/"); // Navigate to the login page after successful registration
+        navigate("/signin"); // Navigate to the login page after successful registration
       }
     } catch (error) {
       console.error(error);
