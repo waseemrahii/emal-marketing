@@ -131,7 +131,13 @@ const PricingCard = () => {
   }, []);
 
   const handleChoosePlan = (plan) => {
-    navigate("/subscribe", { state: { plan } });
+    if (plan.price === 0) {
+      // Navigate to the subscribe page if it's a free plan
+      navigate("/subscribe", { state: { plan } });
+    } else {
+      // Redirect to another page for non-free plans
+      navigate("/"); // Change this to your desired path
+    }
   };
 
   return (
