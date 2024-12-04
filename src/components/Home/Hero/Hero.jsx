@@ -4,6 +4,9 @@ import './Hero.css'; // Importing CSS file for styling
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  const handleRedirect = () => {
+    window.location.href = "https://member.mailingsender.com/login";
+  };
   return (
     <section className="Default_marketing-default-hero__Ew4q_ snipcss-BM3IN" style={{ backgroundColor: 'var(--marketing-mint-green-300, #d7fec8)' }}>
       <div className="dist_marketing-container__H_Hue">
@@ -18,19 +21,18 @@ const Hero = () => {
               </p>
             </div>
             <div className="Default_marketing-default-hero__cta__zb9by">
-             <Link to={'/pricing'} >
-              <button
-                type="button"
-                data-testid="marketing-btn"
-                className="marketing-typo_text-inter-5-medium dist_marketing-btn__T7nAD dist_marketing-btn--lg__09PM4 dist_marketing-btn-light__QOvFK dist_marketing-btn-light--mint-green__EUo3x"
-                aria-disabled="false"
-              >
-                <span className="">Go To App</span>
-                <FaArrowRight className="ml-2" /> {/* React icon added */}
-              </button>
-              </Link>
+      <button
+        type="button"
+        data-testid="marketing-btn"
+        className="marketing-typo_text-inter-5-medium dist_marketing-btn__T7nAD dist_marketing-btn--lg__09PM4 dist_marketing-btn-light__QOvFK dist_marketing-btn-light--mint-green__EUo3x"
+        aria-disabled="false"
+        onClick={handleRedirect}
+      >
+        <span className="">Go To App</span>
+        <FaArrowRight className="ml-2" /> {/* React icon added */}
+      </button>
+    </div>
 
-            </div>
           </div>
           <div className="Default_marketing-default-hero__media__z3g1Z">
             <img

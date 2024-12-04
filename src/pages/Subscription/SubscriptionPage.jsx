@@ -46,8 +46,11 @@ const SubscriptionPage = () => {
           subscriptionData
         );
         if (response.status === 201) {
-          toast.success("Subscription successful!");
-          navigate("/");
+          toast.success("Subscription successful! Please Go To App");
+          setTimeout(() => {
+            navigate('/');
+          }, 2000); // 2-second delay
+          
         } else {
           toast.error("Subscription failed.");
         }
