@@ -25,7 +25,7 @@ const Hero = () => {
                 className="marketing-typo_text-inter-5-medium dist_marketing-btn__T7nAD dist_marketing-btn--lg__09PM4 dist_marketing-btn-light__QOvFK dist_marketing-btn-light--mint-green__EUo3x"
                 aria-disabled="false"
               >
-                <span className="">Sign up free</span>
+                <span className="">Go To App</span>
                 <FaArrowRight className="ml-2" /> {/* React icon added */}
               </button>
               </Link>

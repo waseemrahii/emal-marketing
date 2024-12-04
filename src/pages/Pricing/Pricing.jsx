@@ -139,7 +139,9 @@ const PricingCard = () => {
       {loading ? (
         <div className="h-loading mt-5"><LoadingSpinner />   </div>
       ) : (
+        
         <div className="h-pricing-card__row">
+
           {plans.map((plan, index) => (
             <div
               key={index}

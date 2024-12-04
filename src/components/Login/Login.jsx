@@ -25,9 +25,13 @@ const Login = () => {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('user', JSON.stringify(data.user));
                 toast.success('Login successful!');
-                navigate('/'); // Navigate to the home page
+               
+      // Delay navigation to ensure the toast is visible
+      setTimeout(() => {
+        navigate('/pricing');
+      }, 2000); // 2-second delay
             } else {
-                toast.error(data.msg || 'Login failed.');
+                toast.error(data.msg || 'Login failed. check you email and password');
             }
         } catch (error) {
             console.error('Error:', error);
